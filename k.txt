@@ -1,0 +1,28 @@
+const { JSDOM} =require('jsdom')
+
+function getURLSfromHtml(htmlbody,baseURL){
+const urls=[]
+const dom= new JSDOM(htmlbody)
+const linkelements= dom.window.document.querySelectorAll('a')
+for(const linkelement of linkelements){
+    console.log(linkelement.href)
+}
+return urls
+}
+
+
+test('getURLSfromHtml',()=>
+{
+    const inputHTMLBody=`
+    <html>
+        <body>
+            <a href="http://blog.boot.dev">
+            Boot.dev Blog
+            </a>
+        </body>
+    </html>`
+    const inputBASEURL="https://blog.boot.dev"
+    const actual= getURLSfromHtml(inputHTMLBody,inputBASEURL)
+    const expected=["https://blog.boot.dev"]
+    expect(actual).toEqual(expected)
+})
