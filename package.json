@@ -1,0 +1,23 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "Project to work with http",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sneekyboots/webcrawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sneekyboots/webcrawler/issues"
+  },
+  "homepage": "https://github.com/Sneekyboots/webcrawler#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
